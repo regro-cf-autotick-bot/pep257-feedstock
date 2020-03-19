@@ -1,5 +1,4 @@
 {% set version = "0.7.0" %}
-{% set hash_type = "md5" %}
 {% set hash = "ff3dc9622c2406b7b583a283fbea651e" %}
 
 package:
@@ -9,11 +8,11 @@ package:
 source:
   fn: pep257-{{version}}.tar.gz
   url: https://pypi.io/packages/source/p/pep257/pep257-{{ version }}.tar.gz 
-  {{ hash_type }}: {{ hash }}
+  md5: {{ hash }}
 
 build:
     script: python setup.py install --single-version-externally-managed --record=record.txt
-    number: 1000
+    number: 1001
 
 requirements:
   build:
@@ -30,6 +29,7 @@ test:
 about:
   home: https://github.com/GreenSteam/pep257
   license: MIT
+  license_file: LICENSE-MIT
   summary: 'Python docstring style checker (replaced by pydocstyle)'
   description: |
     pep257 is a static analysis tool for checking compliance with Python
